@@ -1,0 +1,22 @@
+#cookie {
+    max-width: 420px;
+    width: 100%;
+    cursor: pointer;
+    transition: .2s transform;
+}
+#cookie:hover {
+    transform: scale(8);
+}
+#cookie:active {
+    transition: .04s transform;
+    transform: scale(0.98);
+}
+.mn{
+    text-align: center;
+    font-family:'Oswald', sans-serif;
+    font-size: 400%;
+    color: blue;
+}
+body{
+    background-image:url(https://img.freepik.com/premium-vector/cookie-cartoon-character-seamless-pattern-yellow-background-pixel-style_618978-1651.jpg);
+}
