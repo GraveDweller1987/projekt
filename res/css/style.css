@@ -10,7 +10,7 @@
     user-select: none;
 }
 #cookie:active {
-    transition: .04s transform;
+    transition: .04s;
     transform: scale(0.98);
 }
 .mn{
@@ -21,4 +21,16 @@
 }
 body{
     background-image:url(https://img.freepik.com/premium-vector/cookie-cartoon-character-seamless-pattern-yellow-background-pixel-style_618978-1651.jpg);
+}
+#clickupgrade{
+    font-size: 24px;
+    color: aqua;
+    background-color: black;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#clickupgrade:hover{
+    transform: scale(1.2);
+    transition: .04s;
+
 }
