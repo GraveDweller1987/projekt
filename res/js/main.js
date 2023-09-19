@@ -24,6 +24,7 @@ cookie.onclick = () => {
     }
 }
 const clickupgradefunction = () => {
+    // zkusi  pokud pocet susenek je vetsi nebo roven cene upgradu
     if (numberOfCookies >= costofclickupgrade) {
         //odecteme cenu upgradu
         //pocet susenek a odectu 20 (cena upgradu)
