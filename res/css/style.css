@@ -3,9 +3,11 @@
     width: 100%;
     cursor: pointer;
     transition: .2s transform;
+    user-select: none;
 }
 #cookie:hover {
     transform: scale(1.1);
+    user-select: none;
 }
 #cookie:active {
     transition: .04s transform;
