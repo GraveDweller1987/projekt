@@ -10,6 +10,11 @@ let autoclickincrease = 0;
 let autoclicker;
 let autoclickercost = 100;
 
+const updateInfo = () => {
+    document.title = numberOfCookies;
+//nefacha kdo vi proc
+}
+
 autoclick.onclick = () => {
     if (numberOfCookies >= autoclickercost) {
         //odecist susenky
@@ -28,7 +33,7 @@ autoclick.onclick = () => {
             numberOfCookies += autoclickincrease;
             //aktualizovat odstavec
             counter.innerHTML = "Cookies: " + numberOfCookies;
-            
+
         }, 1000)
        
     }
