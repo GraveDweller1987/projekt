@@ -5,6 +5,7 @@ const autoclick = document.getElementById("autoclick");
 const death = document.getElementById("death")
 const randomcolor = document.getElementById("barva")
 const test = document.getElementById("test")
+const epilepsy = document.getElementById("I_Love_drugs")
 
 let numberOfCookies = 0;
 let costofclickupgrade = 20;
@@ -16,8 +17,16 @@ let deathcost = 1000000
 let colorcost = 1000
 let testcost = 1
 let testnumber = Math. random() < 0.5;
+let epi_cost = 1
 
 
+epilepsy.onclick = () => {
+    let intervalTrip = setInterval(epilepsyTrip, 100);
+}
+
+function epilepsyTrip() {
+    nah_barva();
+}
 
 function updateInfo() {
     document.title = numberOfCookies;
@@ -68,15 +77,29 @@ autoclick.onclick = () => {
 
 
 // {} - scope
-cookie.onclick = () => {
+cookie.onclick = (e) => {
     console.log("click");
     //numberOfCookies = numberOfCookies + 1;
     //numberOfCookies += 1;
     // ++ inkrement
     numberOfCookies += clickupgradeincrease;
+    const clickText = document.createElement("div");
+    clickText.className = "clicktext";
+    clickText.style.left = `${e.clientX + window.scrollX}px`;
+    clickText.style.top = `${e.clientY + window.scrollY}px`;
+    clickText.innerText = "+ " + clickupgradeincrease;
+
+    document.body.appendChild(clickText);
+
+    setTimeout(() => {
+
+        clickText.remove();
+
+    }, 1990);
     console.log(numberOfCookies);
     counter.innerHTML = "Pills Eaten: " + numberOfCookies;
-    audio.play()
+    audio.play();
+    pillCheck()
 }
 const clickupgradefunction = () => {
     // zkusi  pokud pocet susenek je vetsi nebo roven cene upgradu
@@ -92,6 +115,7 @@ const clickupgradefunction = () => {
 
         //zvedneme pocet susenek na kliknuti
         clickupgradeincrease++;
+        pillCheck()
     }
 }
 
@@ -99,11 +123,57 @@ randomcolor.onclick = () => {
 
     if(numberOfCookies >= colorcost){    numberOfCookies -= colorcost;
         counter.innerText = "Pills Eaten: " + numberOfCookies;
-        nah_barva()
+        nah_barva();
+        pillCheck()
     }
 
 
 }
+
+function pillCheck() {
+    if (numberOfCookies >= costofclickupgrade) {
+        clickupgrade.style.color = "aqua";
+        clickupgrade.style.pointerEvents = "auto";
+    }
+    if (numberOfCookies < costofclickupgrade) {
+        clickupgrade.style.color = "white";
+        clickupgrade.style.pointerEvents = "none";
+    }
+    if (numberOfCookies >= colorcost) {
+        randomcolor.style.color = "aqua";
+        randomcolor.style.pointerEvents = "auto";
+    }
+    if (numberOfCookies < colorcost) {
+        randomcolor.style.color = "white";
+        randomcolor.style.pointerEvents = "none";
+    }
+    if (numberOfCookies >= deathcost) {
+        death.style.color = "aqua";
+        death.style.pointerEvents = "auto";
+    }
+    if (numberOfCookies < deathcost) {
+        death.style.color = "white";
+        death.style.pointerEvents = "none";
+    }
+    if (numberOfCookies >= autoclickercost) {
+        autoclick.style.color = "aqua";
+        autoclick.style.pointerEvents = "auto";
+    }
+    if (numberOfCookies < autoclickercost) {
+        autoclick.style.color = "white";
+        autoclick.style.pointerEvents = "none";
+    }
+    if (numberOfCookies >= epi_cost) {
+        epilepsy.style.color = "aqua";
+        epilepsy.style.pointerEvents = "auto";
+    }
+    if (numberOfCookies < epi_cost) {
+        epilepsy.style.color = "white";
+        epilepsy.style.pointerEvents = "none";
+    }
+}
+
+
 
 clickupgrade.onclick = clickupgradefunction;
 //tvorba funkce
@@ -141,5 +211,6 @@ function play() {
   
     document.body.style.background = bgColor;
     }
+
 
     
