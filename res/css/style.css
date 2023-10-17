@@ -1,6 +1,5 @@
 #cookie {
-    max-width: 420px;
-    width: 100%;
+    max-width: 450px;
     cursor: pointer;
     transition: .2s transform;
     user-select: none;
@@ -17,18 +16,29 @@
     text-align: center;
     font-family:'Oswald', sans-serif;
     font-size: 200%;
-    color: rgb(255, 0, 0);
+    color: white;
+    padding: 20px;
+
 }
 body{
-  margin: 0;
-    background-image:url(https://img.freepik.com/premium-vector/cookie-cartoon-character-seamless-pattern-yellow-background-pixel-style_618978-1651.jpg);
+background-color: black;
+
 }
 #clickupgrade{
     font-size: 24px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
     color: aqua;
-    background-color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
     cursor: pointer;
     transition: .3s ease;
+
+    
 }
 #clickupgrade:hover{
     transform: scale(1.1);
@@ -37,9 +47,22 @@ body{
 }
 
 #autoclick{
-    color: black;
-    background-color: aqua;
     font-size: 24px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    color: aqua;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    cursor: pointer;
+    transition: .3s ease;
+
+
+
+
+
 
 }
 #autoclick:hover{
@@ -48,9 +71,62 @@ body{
 
 }
 
-#counter{
-    background-color: black;
+#death{
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    color: aqua;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
+    cursor: pointer;
+    transition: .3s ease;
+
 }
+
+#death:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+#barva{
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.0);
+    border: none;
+    color: aqua;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
+    cursor: pointer;
+    transition: .3s ease;
+}
+#barva:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
 img{
     max-width: 70px;
+}
+.buts{
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 20px;
+    margin-top: 1%;
+    display: flex;
+}
+
+.lore{
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 20px;
+}
+.t{
+    text-align: center;
 }
